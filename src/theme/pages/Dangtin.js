@@ -173,8 +173,8 @@ export default class Dangtin extends Component {
                         <Text>THÔNG TIN KHÁC</Text>
                         <Text>Hướng nhà</Text>
                         <TextInput
-                        placehoder="Chọn hướng BDS"
-                        placehoderTextColor='#6c757d'
+                            placehoder="Chọn hướng BDS"
+                            placehoderTextColor='#6c757d'
                         />
                         <Text>Pháp lý</Text>
                         <TextInput
