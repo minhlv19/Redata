@@ -1,7 +1,7 @@
 //This is an example code for NavigationDrawer//
 import React, {Component} from 'react';
 //import react in our code.
-import {View, Image, TouchableOpacity, StatusBar} from 'react-native';
+import {View, Image,Text, TouchableOpacity, StatusBar} from 'react-native';
 
 import {createAppContainer} from 'react-navigation';
 import {createDrawerNavigator} from 'react-navigation-drawer';
@@ -17,6 +17,7 @@ import Lienhe from '../pages/Lienhe';
 import GuiChothue from '../pages/GuiChothue';
 import Naptien from '../pages/Naptien';
 import Login from '../pages/Login';
+import {color} from "react-native-reanimated";
 
 
 class NavigationDrawerStructure extends Component {
@@ -38,14 +39,25 @@ class NavigationDrawerStructure extends Component {
           translucent={false}
           //allowing light, but not detailed shapes
           networkActivityIndicatorVisible={true}
+
         />
         <TouchableOpacity onPress={this.toggleDrawer.bind(this)}>
           {/*Donute Button Image */}
+         <View style={{alignItems:'center'}} >
           <Image
             source={require('../../asset/images/drawer.png')}
-            style={{width: 25, height: 25, marginLeft: 5}}
+            style={{width: 25, height: 25,marginTop:10, marginLeft: 10,alignItems:'center'}}
           />
+         </View>
         </TouchableOpacity>
+          <View style={{flexDirection:'row',alignItems:'center'}}>
+              <Image
+                  source={require('../../asset/images/logo.png')}
+                  style={{width: 45, height: 45, marginLeft: 35,alignItems:'center'}}
+              />
+              <Text style={{color:'yellow',alignItems:'center',marginLeft:40,}}>HOTLINE :</Text>
+              <Text style={{color:'white',alignItems:'center',marginLeft:12,}}>0989 625 304</Text>
+          </View>
       </View>
     );
   }
@@ -57,10 +69,11 @@ const Home_Stack = createStackNavigator({
   Home: {
     screen: HomeScreen,
     navigationOptions: ({navigation}) => ({
-      title: 'Trang chu',
+      title: null,
       headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
       headerStyle: {
         backgroundColor: '#172d44',
+opacity:10,
       },
       headerTintColor: '#fff',
     }),
@@ -73,7 +86,7 @@ const Gioithieu_Stack = createStackNavigator({
   Intro: {
     screen: Gioithieu,
     navigationOptions: ({navigation}) => ({
-      title: 'Gioi thieu',
+      title: null,
      headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
 
       headerStyle: {
@@ -90,7 +103,7 @@ const Chothue_Stack = createStackNavigator({
   Chothue: {
     screen: Chothue,
     navigationOptions: ({navigation}) => ({
-      title: 'Cho thue',
+      title: null,
      headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
       headerStyle: {
         backgroundColor: '#172d44',
@@ -104,7 +117,7 @@ const Canthue_Stack = createStackNavigator({
     Canthue:{
         screen:Canthue,
         navigationOptions:  ({navigation}) =>({
-            title:'Can thue',
+            title:null,
             headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
             headerStyle: {
                 backgroundColor: '#172d44',
@@ -117,7 +130,7 @@ const GuiChoThue_Stack = createStackNavigator( {
     GuiChoThue:{
         screen:GuiChothue,
         navigationOptions: ({navigation}) =>({
-            title:'Gui Cho thue',
+            title:null,
             headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
             headerStyle:{
                 backgroundColor: '#172d44',
@@ -131,7 +144,7 @@ const DaiLy_Stack = createStackNavigator({
     DaiLy:{
         screen:Daily,
         navigationOptions: ({navigation}) =>({
-            title:'Dai Ly',
+            title:null,
          headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
             headerStyle:{
                 backgroundColor: '#172d44',
@@ -145,7 +158,7 @@ const  DangKy_Stack = createStackNavigator({
     DangKy:{
         screen:Dangky,
         navigationOptions: ({navigation}) =>({
-            title:'DangKy',
+            title:null,
           headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
             headerStyle:{
                 backgroundColor: '#172d44',
@@ -159,7 +172,7 @@ const DangTin_Stack = createStackNavigator({
     DangTin:{
         screen:Dangtin ,
         navigationOptions:  ({navigation}) =>({
-            title:'Dangtin',
+            title:null,
         headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
             headerTintColor:'#fff',
             headerStyle:{
@@ -173,7 +186,7 @@ const LienHe_Stack = createStackNavigator({
     LienHe:{
         screen:Lienhe,
         navigationOptions: ({navigation}) =>({
-            title:'Lien He',
+            title:null,
             headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
             headerStyle:{
                 backgroundColor:'#172d44',
@@ -187,7 +200,7 @@ const Naptien_Stack= createStackNavigator({
     Naptiep:{
         screen:Naptien,
         navigationOptions: ({navigation}) =>({
-            title:'Nap tien',
+            title:null,
             headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
             headerTintColor:'#fff',
             headerStyle:{
@@ -220,7 +233,8 @@ const menu = createDrawerNavigator({
     //Title
     screen: Home_Stack,
     navigationOptions: {
-      drawerLabel: 'Trang chu',
+      drawerLabel: 'TRANG CHU',
+
     },
   },
 
@@ -228,7 +242,7 @@ const menu = createDrawerNavigator({
     //Title
     screen: Gioithieu_Stack,
     navigationOptions: {
-      drawerLabel: 'Gioi thieu',
+      drawerLabel: 'GIOI THIEU',
     },
   },
 
@@ -236,73 +250,90 @@ const menu = createDrawerNavigator({
     //Title
     screen:Chothue_Stack ,
     navigationOptions: {
-      drawerLabel: 'Cho thue',
+      drawerLabel: 'CHO THUE',
     },
   },
     Screen4: {
         //Title
         screen:Canthue_Stack ,
         navigationOptions: {
-            drawerLabel: 'Can thue',
+            drawerLabel: 'CAN THUE',
         },
     },
     Screen5: {
         //Title
         screen:GuiChoThue_Stack ,
         navigationOptions: {
-            drawerLabel: 'Gui thue va cho thue',
+            drawerLabel: 'GUI THUE VA CHO THUE',
         },
     },
     Screen6: {
         //Title
         screen:DaiLy_Stack ,
         navigationOptions: {
-            drawerLabel: 'Dai ly',
+            drawerLabel: 'DAI LY',
         },
     },
     Screen7: {
         //Title
         screen:LienHe_Stack ,
         navigationOptions: {
-            drawerLabel: 'Lien he',
+            drawerLabel: 'LIEN HE',
         },
     },
     Screen8: {
         //Title
         screen:Login_Stack ,
         navigationOptions: {
-            drawerLabel: 'Dang nhap',
+            drawerLabel: 'DANG NHAP',
         },
     },
     Screen9: {
         //Title
         screen:Naptien_Stack ,
         navigationOptions: {
-            drawerLabel: 'Nap tien',
+            drawerLabel: 'NAP TIEN',
         },
     },
     Screen10: {
         //Title
         screen:DangTin_Stack ,
         navigationOptions: {
-            drawerLabel: 'Dang tin',
+            drawerLabel: 'DANG TIN',
         },
     },
     Screen11: {
         //Title
         screen:DangKy_Stack ,
         navigationOptions: {
-            drawerLabel: 'Dang ky',
+            drawerLabel: 'DANG KY',
         },
+
     },
 
 
 },
 {
-    headerMode: 'float',
-    initialRouteName: 'Screen3',
+    // headerMode: 'float',
+    // initialRouteName: 'Screen3',
+    // drawerBackgroundColor:'#172d44',
+    // drawerPosition:'left',
+    contentOptions: {
+        activeTintColor: 'yellow',
+        activeBackgroundColor: '#3E7EBC',
+        inactiveTintColor: 'white',
+        inactiveBackgroundColor: 'transparent',
+        labelStyle: {
+            fontSize: 15,
+            marginLeft: 10,
+        },
+    },
     drawerBackgroundColor:'#172d44',
-    drawerPosition:'left',
+    drawerOpenRoute: 'DrawerOpen',
+    drawerCloseRoute: 'DrawerClose',
+    drawerToggleRoute: 'DrawerToggle',
+
+
 
 });
 
