@@ -60,7 +60,7 @@ const Home_Stack = createStackNavigator({
       title: 'Trang chu',
       headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
       headerStyle: {
-        backgroundColor: '#FF9800',
+        backgroundColor: '#172d44',
       },
       headerTintColor: '#fff',
     }),
@@ -77,7 +77,7 @@ const Gioithieu_Stack = createStackNavigator({
      headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
 
       headerStyle: {
-        backgroundColor: '#FF9800',
+        backgroundColor: '#172d44',
       },
       headerTintColor: '#fff',
     }),
@@ -93,7 +93,7 @@ const Chothue_Stack = createStackNavigator({
       title: 'Cho thue',
      headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
       headerStyle: {
-        backgroundColor: '#FF9800',
+        backgroundColor: '#172d44',
       },
       headerTintColor: '#fff',
     }),
@@ -107,7 +107,7 @@ const Canthue_Stack = createStackNavigator({
             title:'Can thue',
             headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
             headerStyle: {
-                backgroundColor: '#FF9800',
+                backgroundColor: '#172d44',
             },
             headerTintColor: '#fff',
         }),
@@ -120,7 +120,7 @@ const GuiChoThue_Stack = createStackNavigator( {
             title:'Gui Cho thue',
             headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
             headerStyle:{
-                backgroundColor: '#FF9800',
+                backgroundColor: '#172d44',
             },
             headerTintColor: '#fff',
         }),
@@ -134,7 +134,7 @@ const DaiLy_Stack = createStackNavigator({
             title:'Dai Ly',
          headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
             headerStyle:{
-                backgroundColor: '#FF9800',
+                backgroundColor: '#172d44',
             },
             headerTintColor: '#fff',
         }),
@@ -148,7 +148,7 @@ const  DangKy_Stack = createStackNavigator({
             title:'DangKy',
           headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
             headerStyle:{
-                backgroundColor: '#FF9800',
+                backgroundColor: '#172d44',
             },
             headerTintColor:'#fff',
         }),
@@ -163,7 +163,7 @@ const DangTin_Stack = createStackNavigator({
         headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
             headerTintColor:'#fff',
             headerStyle:{
-                backgroundColor:'#FF9800',
+                backgroundColor:'#172d44',
             },
         }),
     },
@@ -176,7 +176,7 @@ const LienHe_Stack = createStackNavigator({
             title:'Lien He',
             headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
             headerStyle:{
-                backgroundColor:'#ff9800',
+                backgroundColor:'#172d44',
             },
             headerTintColor:'#fff',
 
@@ -191,7 +191,7 @@ const Naptien_Stack= createStackNavigator({
             headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
             headerTintColor:'#fff',
             headerStyle:{
-                backgroundColor:'#ff9800',
+                backgroundColor:'#172d44',
             },
         }),
     },
@@ -203,7 +203,7 @@ const Login_Stack = createStackNavigator({
         navigationOptions:  ({navigation}) =>({
             title:'Login',
             headerStyle:{
-                backgroundColor:'#ff9800',
+                backgroundColor:'#172d44',
             },
           headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
             headerTintColor:'#fff',
@@ -214,7 +214,7 @@ const Login_Stack = createStackNavigator({
 
 
 
-const DrawerNavigatorExample = createDrawerNavigator({
+const menu = createDrawerNavigator({
 
   Screen1: {
     //Title
@@ -296,7 +296,15 @@ const DrawerNavigatorExample = createDrawerNavigator({
         },
     },
 
+
+},
+{
+    headerMode: 'float',
+    initialRouteName: 'Screen3',
+    drawerBackgroundColor:'#172d44',
+    drawerPosition:'left',
+
 });
 
 
-export default createAppContainer(DrawerNavigatorExample);
+export default createAppContainer(menu);
