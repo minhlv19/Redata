@@ -1,0 +1,55 @@
+{
+  "data": [
+    {
+      "image": "https://redata.vn/public/upload/chothue/2019/10/small_70293632_2424837500946212_2641332920567988224_n.jpg",
+      "title": "chính chủ cho thuê mặt bằng kinh doanh và sàn văn phòng",
+      "price": "25 triệu/tháng",
+      "acreage": "150m2",
+      "location": "Quan Hoa , cầu giấy , Hà nội"
+    },
+    {
+      "image": "https://redata.vn/public/upload/chothue/2019/10/small_saccs.jpg",
+      "title": "Cho thuê mặt phố Trần Duy Hưng 5,5 tầng",
+      "price": "70 triệu/tháng",
+      "acreage": "60m2",
+      "location": "Trung hòa , cầu giấy , Hà nội"
+    },
+    {
+      "image": "https://redata.vn/public/upload/chothue/2019/10/small_3b5f91ec1efdf8a3a1ec.jpg",
+      "title": "Gấp Gấp cần sang nhượng mặt bằng kinh doanh....",
+      "price": "18.5 triệu/tháng",
+      "acreage": "85m2",
+      "location": "Trung hòa , cầu giấy , Hà nội"
+    },
+    {
+      "image": "https://redata.vn/public/upload/chothue/2019/10/small_lang40m.jpg",
+      "title": " Cho thuê nhà nguyên căn ở Giáp Nhị, Thịnh Liệt, Hoàng Mai",
+      "price": "12 triệu/tháng",
+      "acreage": "50m2",
+      "location": "Thịnh Liệt,Hoàng mai , Hà nội"
+    }
+  ],
+
+  "sile" : [
+    {
+      "title": "Title 1",
+      "caption": "Caption 1",
+      "url": "https://redata.vn/public/upload/banner/hero1.jpg"
+    },
+    {
+      "title": "Title 2",
+      "caption": "Caption 2",
+      "url": "https://redata.vn/public/upload/banner/hero2.jpg"
+    },
+    {
+      "title": "Title 3",
+      "caption": "Caption 3",
+      "url": "https://redata.vn/public/upload/banner/hero3.jpg"
+    },
+    {
+      "title": "Title 4",
+      "caption": "Caption 4",
+      "url": "https://redata.vn/public/upload/banner/hero4.jpg"
+    }
+  ]
+}
